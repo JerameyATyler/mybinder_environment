@@ -7,7 +7,7 @@ test -e test.png && rm test.png
 
 jupyter contrib nbextension install --user
 jupyter nbextension enable --py widgetsnbextension
-jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38 --minimize=False
+jupyter labextension install @jupyter-widgets/jupyterlab-manager --minimize=False
 jupyter labextension install @jupyterlab/latex
 jupyter serverextension enable --py nbgitpuller --sys-prefix
 
@@ -25,3 +25,9 @@ unzip -o mozart_mp3.zip -d anechoic/mozart
 unzip -o bruckner_mp3.zip -d anechioc/bruckner
 unzip -o mahler_mp3.zip -d anechioc/mahler
 unzip -o full.zip -d hrtf
+
+rm -rf beethoven_mp3.zip
+rm -rf mozart_mp3.zip
+rm -rf bruckner_mp3.zip
+rm -rf mahler_mp3.zip
+rm -rf full.zip
