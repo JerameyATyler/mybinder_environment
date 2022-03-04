@@ -10,3 +10,18 @@ jupyter nbextension enable --py widgetsnbextension
 jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38 --minimize=False
 jupyter labextension install @jupyterlab/latex
 jupyter serverextension enable --py nbgitpuller --sys-prefix
+
+wget -q -O beethoven_mp3.zip "https://mediatech.aalto.fi/images/research/virtualacoustics/recordings/beethoven_mp3.zip"
+wget -q -O mozart_mp3.zip "https://mediatech.aalto.fi/images/research/virtualacoustics/recordings/mozart_mp3.zip"
+wget -q -O bruckner_mp3.zip "https://mediatech.aalto.fi/images/research/virtualacoustics/recordings/bruckner_mp3.zip"
+wget -q -O mahler_mp3.zip "https://mediatech.aalto.fi/images/research/virtualacoustics/recordings/mahler_mp3.zip"
+wget -q -O full.zip "https://sound.media.mit.edu/resources/KEMAR/full.zip"
+
+mkdir anechoic
+mkdir hrtf
+
+unzip -o beethoven_mp3.zip -d anechoic/beethoven
+unzip -o mozart_mp3.zip -d anechoic/mozart
+unzip -o bruckner_mp3.zip -d anechioc/bruckner
+unzip -o mahler_mp3.zip -d anechioc/mahler
+unzip -o full.zip -d hrtf
