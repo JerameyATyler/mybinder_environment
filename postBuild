@@ -31,32 +31,3 @@ rm -rf mozart_mp3.zip
 rm -rf bruckner_mp3.zip
 rm -rf mahler_mp3.zip
 rm -rf full.zip
-
-mkdir train
-mkdir test
-mkdir validate
-mkdir train_recipe
-mkdir test_recipe
-mkdir validate_recipe
-
-wget -q -O full.zip "https://reflections.speakeasy.services/full.zip"
-
-unzip -o full.zip .
-
-rm -rf code.zip
-
-unzip -o -j train.zip -d train
-unzip -o -j test.zip -d test
-unzip -o -j validate.zip -d validate
-
-rm -rf train.zip
-rm -rf test.zip
-rm -rf validate.zip
-
-unzip -o -j train/train_recipe.zip -d train_recipe
-unzip -o -j test/test_recipe.zip -d test_recipe
-unzip -o -j validate/validate_recipe.zip -d validate_recipe
-
-rm -rf train/train_recipe.zip
-rm -rf test/test_recipe.zip
-rm -rf validate/validate_recipe.zip
