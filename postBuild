@@ -15,19 +15,34 @@ wget -q -O beethoven_mp3.zip "https://mediatech.aalto.fi/images/research/virtual
 wget -q -O mozart_mp3.zip "https://mediatech.aalto.fi/images/research/virtualacoustics/recordings/mozart_mp3.zip"
 wget -q -O bruckner_mp3.zip "https://mediatech.aalto.fi/images/research/virtualacoustics/recordings/bruckner_mp3.zip"
 wget -q -O mahler_mp3.zip "https://mediatech.aalto.fi/images/research/virtualacoustics/recordings/mahler_mp3.zip"
-wget -q -O full.zip "https://sound.media.mit.edu/resources/KEMAR/full.zip"
+wget -q -O hrtf.zip "https://sound.media.mit.edu/resources/KEMAR/full.zip"
+wget -q -O full.zip "https://reflections.speakeasy.services/full.zip"
 
 mkdir anechoic
 mkdir hrtf
+mkdir train
+mkdir train_recipe
+mkdir test
+mkdir test_recipe
+mkdir validate
+mkdir validate_recipe
 
 unzip -o beethoven_mp3.zip -d anechoic/beethoven
 unzip -o mozart_mp3.zip -d anechoic/mozart
 unzip -o bruckner_mp3.zip -d anechioc/bruckner
 unzip -o mahler_mp3.zip -d anechioc/mahler
-unzip -o full.zip -d hrtf
+unzip -o hrtf.zip -d hrtf
+unzip -o full.zip
+unzip -o train_recipe.zip -d train_recipe
+unzip -o test_recipe.zip -d test_recipe
+unzip -o validate_recipe.zip -d validate_recipe
 
 rm -rf beethoven_mp3.zip
 rm -rf mozart_mp3.zip
 rm -rf bruckner_mp3.zip
 rm -rf mahler_mp3.zip
+rm -rf hrtf.zip
 rm -rf full.zip
+rm -rf train_recipe.zip
+rm -rf test_recipe.zip
+rm -rm validate_recipe.zip
